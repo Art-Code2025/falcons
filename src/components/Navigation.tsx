@@ -43,11 +43,10 @@ const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpen, scro
   }, [isMenuOpen, setIsMenuOpen]);
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-      scrolled 
-        ? 'bg-white/90 backdrop-blur-md shadow-lg border-b border-gray-200' 
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled
+        ? 'bg-white/90 backdrop-blur-md shadow-lg border-b border-gray-200'
         : 'bg-transparent backdrop-blur-md'
-    }`}>
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           <div className="flex items-center">
@@ -55,9 +54,9 @@ const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpen, scro
               <div className="flex items-center group">
                 {/* Enhanced Logo */}
                 <div className="relative">
-                  <img 
-                    src="/logo.png" 
-                    alt="Falcons Logo" 
+                  <img
+                    src="/logo.png"
+                    alt="Falcons Logo"
                     className="w-12 h-12 md:w-16 md:h-16 transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -65,23 +64,22 @@ const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpen, scro
               </div>
             </div>
           </div>
-          
+
           <div className="hidden md:block">
             <div className="ml-6 md:ml-10 flex items-baseline space-x-4 md:space-x-8">
               {[
                 { key: 'about', label: t('navigation.about') },
                 { key: 'services', label: t('navigation.services') },
                 { key: 'portfolio', label: t('navigation.portfolio') },
-                { key: 'team', label: t('navigation.team') },
                 { key: 'reviews', label: t('navigation.reviews') },
+                { key: 'team', label: t('navigation.team') },
                 { key: 'contact', label: t('navigation.contact') }
               ].map((item, index) => (
-                <button 
+                <button
                   key={item.key}
-                  onClick={() => scrollToSection(item.key)} 
-                  className={`transition-all duration-300 text-xs md:text-sm font-medium relative group ${
-                    scrolled ? 'text-gray-700 hover:text-blue-600' : 'text-gray-300 hover:text-white'
-                  }`}
+                  onClick={() => scrollToSection(item.key)}
+                  className={`transition-all duration-300 text-xs md:text-sm font-medium relative group ${scrolled ? 'text-gray-700 hover:text-blue-600' : 'text-gray-300 hover:text-white'
+                    }`}
                 >
                   {item.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
@@ -98,15 +96,14 @@ const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpen, scro
               </div>
             </div>
           </div>
-          
+
           <div className="md:hidden">
             <div className="flex items-center gap-3">
               <LanguageSwitcher />
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`transition-all duration-300 hover:scale-110 ${
-                  scrolled ? 'text-gray-700 hover:text-blue-600' : 'text-gray-300 hover:text-white'
-                }`}
+                className={`transition-all duration-300 hover:scale-110 ${scrolled ? 'text-gray-700 hover:text-blue-600' : 'text-gray-300 hover:text-white'
+                  }`}
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -114,16 +111,16 @@ const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpen, scro
           </div>
         </div>
       </div>
-      
+
       {/* Enhanced Mobile Menu with Language Switcher Always Visible */}
       {isMenuOpen && (
         <>
           {/* Backdrop overlay for click outside */}
-          <div 
+          <div
             className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
             onClick={() => setIsMenuOpen(false)}
           />
-          
+
           <div className="md:hidden animate-slideInFromTop z-50 relative" ref={menuRef}>
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-xl">
               {/* Navigation Links */}
@@ -135,9 +132,9 @@ const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpen, scro
                 { key: 'reviews', label: t('navigation.reviews') },
                 { key: 'contact', label: t('navigation.contact') }
               ].map((item, index) => (
-                <button 
+                <button
                   key={item.key}
-                  onClick={() => scrollToSection(item.key)} 
+                  onClick={() => scrollToSection(item.key)}
                   className="block w-full text-left px-3 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200 text-sm font-medium rounded-lg"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >

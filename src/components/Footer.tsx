@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
   
   return (
     <section className="relative pt-16 pb-8 md:pt-24 md:pb-12 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-400 overflow-x-hidden">
@@ -37,26 +56,26 @@ const Footer: React.FC = () => {
           <div className="flex flex-col gap-8 animate-fadeInRight delay-300">
             <div className="grid grid-cols-2 gap-6 mt-4">
               <div className="group">
-                <h4 className="font-semibold mb-2 text-gray-700 group-hover:text-blue-600 transition-colors duration-300">{t('footer.links.about')}</h4>
-                <ul className="space-y-1 text-gray-600 text-sm">
+                <h4 className="font-semibold mb-2 text-gray-700 group-hover:text-blue-600 transition-colors duration-300">Links</h4>
+                <ul className="space-y-2 text-gray-600 text-sm">
                   {[
-                    { key: 'about', label: t('navigation.about') },
-                    { key: 'services', label: t('navigation.services') },
-                    { key: 'portfolio', label: t('navigation.portfolio') },
-                    { key: 'team', label: t('navigation.team') },
-                    { key: 'reviews', label: t('navigation.reviews') },
-                    { key: 'contact', label: t('navigation.contact') }
-                  ].map((item, index) => (
-                    <li key={item.key}>
-                      <a 
-                        href="#" 
-                        className="hover:text-blue-700 transition-colors duration-200 hover:translate-x-1 inline-block"
-                        style={{ animationDelay: `${index * 100}ms` }}
-                      >
-                        {item.label}
-                      </a>
-                    </li>
-                  ))}
+                { key: 'about', label: t('navigation.about') },
+                { key: 'services', label: t('navigation.services') },
+                { key: 'portfolio', label: t('navigation.portfolio') },
+                { key: 'reviews', label: t('navigation.reviews') },
+                { key: 'team', label: t('navigation.team') },
+                { key: 'contact', label: t('navigation.contact') }
+              ].map((item, index) => (
+                <li key={item.key}>
+                  <button
+                    onClick={() => scrollToSection(item.key)}
+                    className="block w-full text-left transition-all duration-300 text-xs md:text-sm font-medium relative group text-gray-600 hover:text-blue-600"
+                  >
+                    {item.label}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                  </button>
+                </li>
+              ))}
                 </ul>
               </div>
               
@@ -109,4 +128,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer; 
+export default Footer;
