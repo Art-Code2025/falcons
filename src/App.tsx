@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { Menu, X, ArrowRight, ChevronLeft, ChevronRight, Star, Phone, Mail, MapPin, Clock ,Users, Headset,Grid} from 'lucide-react';
+import { Menu, X, ArrowRight, ChevronLeft, ChevronRight, Star, Phone, Mail, MapPin, Clock, Users, Headset, Grid } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
@@ -106,33 +106,108 @@ function App() {
   return (
     <div className={`min-h-screen bg-gray-900 ${i18n.language === 'ar' ? 'rtl' : 'ltr'} opacity-100`}>
       <Helmet>
-        <title>FALCONS - Hong Kong Trading Company | Furniture, Building Materials & Cosmetics</title>
-        <meta name="description" content="FALCONS is a registered trading company in Hong Kong since 2004. We specialize in trading Furniture, Building materials and Cosmetics with direct supply from Chinese suppliers." />
-        <meta name="keywords" content="Hong Kong trading, furniture, building materials, cosmetics, Chinese suppliers, international trade" />
-        <meta name="author" content="FALCONS" />
-        <meta name="robots" content="index, follow" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="FALCONS - Hong Kong Trading Company" />
-        <meta property="og:description" content="Specialized trading in Furniture, Building materials and Cosmetics with 15+ years experience." />
+        <title>{t('seo.title')} | FALCONS Trading Company</title>
+        <meta name="description" content="FALCONS - Premier Hong Kong trading company established 2004. Expert in furniture, building materials & cosmetics with direct Chinese suppliers. Professional international trade services with 20+ years experience." />
+        <meta name="keywords" content="Hong Kong trading company, furniture wholesale, building materials supplier, cosmetics distributor, Chinese manufacturers, international trade, export import services, FALCONS trading, Hong Kong business, wholesale furniture, construction materials, beauty products wholesale" />
+        <meta name="author" content="FALCONS Trading Company" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="bingbot" content="index, follow" />
+        <meta name="language" content={i18n.language === 'ar' ? 'Arabic' : 'English'} />
+        <meta name="geo.region" content="HK" />
+        <meta name="geo.placename" content="Hong Kong" />
+        <meta name="ICBM" content="22.3193,114.1694" />
+
+        {/* Open Graph tags */}
+        <meta property="og:title" content="FALCONS - Premier Hong Kong Trading Company | Furniture, Building Materials & Cosmetics" />
+        <meta property="og:description" content="Established 2004. Leading Hong Kong trading company specializing in furniture, building materials, and cosmetics with direct Chinese suppliers. Professional international trade services." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://falcons-trading.com" />
-        <meta property="og:image" content="/logo.png" />
-        
-        {/* Twitter Card */}
+        <meta property="og:image" content="https://falcons-trading.com/logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="FALCONS Trading Company Logo" />
+        <meta property="og:site_name" content="FALCONS Trading Company" />
+        <meta property="og:locale" content={i18n.language === 'ar' ? 'ar_AE' : 'en_US'} />
+
+        {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="FALCONS - Hong Kong Trading Company" />
-        <meta name="twitter:description" content="Specialized trading in Furniture, Building materials and Cosmetics." />
-        
-        {/* Additional SEO */}
-        <link rel="canonical" href="https://falcons-trading.com" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="twitter:site" content="@falconstrading" />
+        <meta name="twitter:creator" content="@falconstrading" />
+        <meta name="twitter:title" content="FALCONS - Premier Hong Kong Trading Company" />
+        <meta name="twitter:description" content="Leading Hong Kong trading company since 2004. Specializing in furniture, building materials, and cosmetics with direct Chinese suppliers." />
+        <meta name="twitter:image" content="https://falcons-trading.com/logo.png" />
+        <meta name="twitter:image:alt" content="FALCONS Trading Company Logo" />
+
+        {/* Additional SEO meta tags */}
         <meta name="theme-color" content="#1e40af" />
+        <meta name="msapplication-TileColor" content="#1e40af" />
+        <meta name="msapplication-TileImage" content="/logo.png" />
+        <link rel="canonical" href="https://falcons-trading.com" />
+        <link rel="alternate" hrefLang="en" href="https://falcons-trading.com" />
+        <link rel="alternate" hrefLang="ar" href="https://falcons-trading.com/ar" />
+
+        {/* Business Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "FALCONS Trading Company",
+            "alternateName": "FALCONS",
+            "url": "https://falcons-trading.com",
+            "logo": "https://falcons-trading.com/logo.png",
+            "description": "Premier Hong Kong trading company established in 2004, specializing in furniture, building materials, and cosmetics with direct Chinese suppliers.",
+            "foundingDate": "2004",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "HK",
+              "addressRegion": "Hong Kong"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer service",
+              "availableLanguage": ["English", "Arabic", "Chinese"]
+            },
+            "sameAs": [
+              "https://falcons-trading.com"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Trading Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Furniture Trading",
+                    "description": "High-quality furniture from Chinese manufacturers"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Building Materials",
+                    "description": "Construction and building materials supply"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Cosmetics",
+                    "description": "Beauty and cosmetic products wholesale"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
-      
+
       {/* Scroll Progress Indicator */}
       <div className="fixed top-0 left-0 w-full h-1 bg-gray-800 z-50">
-        <div 
+        <div
           className="h-full bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300"
           style={{ width: `${scrollProgress}%` }}
         />
@@ -157,7 +232,7 @@ function App() {
         {/* Background decorative elements */}
         <div className="absolute top-0 left-0 w-32 h-32 bg-blue-100 rounded-full blur-3xl opacity-30 animate-enhanced-float morph-shape" />
         <div className="absolute bottom-0 right-0 w-40 h-40 bg-purple-100 rounded-full blur-3xl opacity-30 animate-enhanced-float delay-1000 morph-shape" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           {/* Enhanced Steps at the top */}
           <div className="flex flex-wrap justify-center md:justify-start gap-6 md:gap-12 mb-10 md:mb-16">
@@ -178,15 +253,15 @@ function App() {
               <div className="text-base md:text-lg font-semibold tracking-wide text-gray-700 text-glow text-reveal">Trading</div>
             </div>
           </div>
-          
+
           {/* Main content with enhanced animations */}
           <div className="grid md:grid-cols-2 gap-10 md:gap-20 items-center">
             {/* Left: Text with enhanced effects */}
             <div className="relative">
               {/* Decorative line */}
               <div className="absolute top-0 left-0 w-16 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-8 morph-shape" />
-              
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-6 opacity-0 animate-slide-right delay-100"> 
+
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-gray-900 mb-6 opacity-0 animate-slide-right delay-100">
                 <span className="italic font-normal text-blue-600 typewriter">{t('about.title')}</span>
               </h2>
               <p className="text-gray-700 text-base md:text-lg mb-6 leading-relaxed opacity-0 animate-slide-right delay-200">
@@ -200,19 +275,19 @@ function App() {
                 <ArrowRight size={18} className="animate-pulse" />
               </button>
             </div>
-            
+
             {/* Right: Enhanced Image with effects */}
-            <div className="flex justify-center md:justify-end relative"> 
+            <div className="flex justify-center md:justify-end relative">
               <div className="relative group hover-3d w-full max-w-xs sm:max-w-sm md:max-w-md opacity-0 animate-slide-left delay-500">
-                <img 
-                  src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&q=80" 
-                  alt="About Us" 
-                  className="rounded-3xl shadow-2xl w-full h-auto object-contain border border-gray-100 transition-all duration-500 group-hover:scale-105 group-hover:shadow-3d parallax-scroll morph-shape" 
-                  style={{ 
+                <img
+                  src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&q=80"
+                  alt="About Us"
+                  className="rounded-3xl shadow-2xl w-full h-auto object-contain border border-gray-100 transition-all duration-500 group-hover:scale-105 group-hover:shadow-3d parallax-scroll morph-shape"
+                  style={{
                     minHeight: '250px',
                     maxHeight: '400px',
                     background: '#f3f4f6'
-                  }} 
+                  }}
                 />
                 {/* Overlay effect */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -234,7 +309,7 @@ function App() {
         {/* Background decorative elements */}
         <div className="absolute top-20 left-10 w-24 h-24 bg-green-100 rounded-full blur-3xl opacity-30 animate-enhanced-float morph-shape" />
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-blue-100 rounded-full blur-3xl opacity-30 animate-enhanced-float delay-1500 morph-shape" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 transition-all duration-1000 text-glow-strong opacity-0 animate-fade-up delay-100">
@@ -247,56 +322,56 @@ function App() {
 
           {/* Enhanced Services Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
-  
-  {/* Consulting */}
-  <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2 group hover:scale-105 hover-3d opacity-0 animate-slide-left delay-200">
-    <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
-      <Users className="w-6 h-6 md:w-8 md:h-8 text-white" />
-    </div>
-    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 text-glow">
-      {t('services.consulting.title')}
-    </h3>
-    <p className="text-gray-600 mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
-      {t('services.consulting.description')}
-    </p>
-  </div>
 
-  {/* Support */}
-  <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2 delay-200 group hover:scale-105 hover-3d opacity-0 animate-slide-right delay-300">
-    <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
-      <Headset className="w-6 h-6 md:w-8 md:h-8 text-white" />
-    </div>
-    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 text-glow">
-      {t('services.support.title')}
-    </h3>
-    <p className="text-gray-600 mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
-      {t('services.support.description')}
-    </p>
-  </div>
+            {/* Consulting */}
+            <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2 group hover:scale-105 hover-3d opacity-0 animate-slide-left delay-200">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Users className="w-6 h-6 md:w-8 md:h-8 text-white" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 text-glow">
+                {t('services.consulting.title')}
+              </h3>
+              <p className="text-gray-600 mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+                {t('services.consulting.description')}
+              </p>
+            </div>
 
-  {/* Services Items */}
-  <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2 delay-400 sm:col-span-2 lg:col-span-1 group hover:scale-105 hover-3d opacity-0 animate-slide-left delay-400">
-    <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
-      <Grid className="w-6 h-6 md:w-8 md:h-8 text-white" />
-    </div>
-    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 text-glow">
-      {t('services.services.title')}
-    </h3>
-    <div className="text-gray-600 mb-4 md:mb-6 text-left text-xs md:text-sm">
-      {(t('services.services.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
-        <p key={index} className="mb-2 flex items-center">
-          <span className="w-2 h-2 bg-purple-500 rounded-full mr-3 flex-shrink-0 morph-shape"></span>
-          {item}
-        </p>
-      ))}
-    </div>
-  </div>
+            {/* Support */}
+            <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2 delay-200 group hover:scale-105 hover-3d opacity-0 animate-slide-right delay-300">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Headset className="w-6 h-6 md:w-8 md:h-8 text-white" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 text-glow">
+                {t('services.support.title')}
+              </h3>
+              <p className="text-gray-600 mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
+                {t('services.support.description')}
+              </p>
+            </div>
 
-</div>
+            {/* Services Items */}
+            <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2 delay-400 sm:col-span-2 lg:col-span-1 group hover:scale-105 hover-3d opacity-0 animate-slide-left delay-400">
+              <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Grid className="w-6 h-6 md:w-8 md:h-8 text-white" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 text-glow">
+                {t('services.services.title')}
+              </h3>
+              <div className="text-gray-600 mb-4 md:mb-6 text-left text-xs md:text-sm">
+                {(t('services.services.items', { returnObjects: true }) as string[]).map((item: string, index: number) => (
+                  <p key={index} className="mb-2 flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3 flex-shrink-0 morph-shape"></span>
+                    {item}
+                  </p>
+                ))}
+              </div>
+            </div>
+
+          </div>
 
           {/* Enhanced Large Image Section */}
           <div className="relative rounded-2xl overflow-hidden shadow-2xl group hover-3d">
-            <div 
+            <div
               className="h-64 sm:h-80 md:h-96 bg-cover bg-center relative transition-transform duration-700 group-hover:scale-105 parallax-scroll"
               style={{
                 backgroundImage: `url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1920&q=80')`,
@@ -372,7 +447,7 @@ function App() {
         className="relative py-12 md:py-20 bg-gray-900 text-white overflow-x-hidden opacity-100"
       >
         {/* Background overlay */}
-        <div className="absolute inset-0 bg-cover bg-center opacity-40" style={{backgroundImage: `url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80')`}}></div>
+        <div className="absolute inset-0 bg-cover bg-center opacity-40" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80')` }}></div>
         <div className="absolute inset-0 bg-gray-900/80"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="mb-10 md:mb-16">
@@ -386,10 +461,10 @@ function App() {
             {/* Furniture */}
             <div className="relative group rounded-2xl overflow-hidden shadow-xl opacity-0 animate-fade-up delay-100">
               <div className="aspect-square w-full">
-                <img 
-                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80&fit=crop" 
-                  alt="Furniture" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                <img
+                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80&fit=crop"
+                  alt="Furniture"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
@@ -401,10 +476,10 @@ function App() {
             {/* Building Materials */}
             <div className="relative group rounded-2xl overflow-hidden shadow-xl opacity-0 animate-fade-up delay-200">
               <div className="aspect-square w-full">
-                <img 
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&fit=crop" 
-                  alt="Building Materials" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                <img
+                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&fit=crop"
+                  alt="Building Materials"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
@@ -416,10 +491,10 @@ function App() {
             {/* Cosmetics */}
             <div className="relative group rounded-2xl overflow-hidden shadow-xl opacity-0 animate-fade-up delay-300">
               <div className="aspect-square w-full">
-                <img 
-                  src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80&fit=crop" 
-                  alt="Cosmetics" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                <img
+                  src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80&fit=crop"
+                  alt="Cosmetics"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
@@ -453,7 +528,7 @@ function App() {
               {t('team.subtitle')}
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto">
             {/* Zailai Shouki */}
             <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2 opacity-0 animate-slide-left delay-200">
@@ -468,7 +543,7 @@ function App() {
                 {t('team.members.zailai.description')}
               </p>
             </div>
-            
+
             {/* Minna Gou */}
             <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2 delay-200 opacity-0 animate-slide-right delay-300">
               <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
@@ -509,7 +584,7 @@ function App() {
         {/* Background decorative elements */}
         <div className="absolute top-0 left-0 w-32 h-32 bg-blue-100 rounded-full blur-3xl opacity-30 animate-enhanced-float morph-shape" />
         <div className="absolute bottom-0 right-0 w-40 h-40 bg-purple-100 rounded-full blur-3xl opacity-30 animate-enhanced-float delay-1000 morph-shape" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           {/* Header */}
           <div className="text-center mb-12 md:mb-16">
@@ -539,59 +614,59 @@ function App() {
               </div>
 
               {/* Contact Details */}
-<div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300 opacity-0 animate-slide-right delay-500">
-  <div className="space-y-6">
+              <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300 opacity-0 animate-slide-right delay-500">
+                <div className="space-y-6">
 
-    {/* Phone */}
-    <div className="flex items-center gap-4">
-  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center flex-shrink-0">
-    <Phone className="w-6 h-6 text-white" />
-  </div>
-  <div>
-    <h4 className="font-semibold text-gray-900">Phone</h4>
-    <div className="flex flex-col gap-1">
-       <a href="tel:8662061093893" className="text-blue-600 hover:text-blue-700 transition-colors">
-        866-20-61093893 - Minna 
-      </a>
-    <a
-  href="tel:+966500081927"
-  className="text-blue-600 hover:text-blue-700 transition-colors"
->
-  <span dir="ltr">+966 50 008 1927</span>
-  <span className="ml-1">- Saeed Saad</span>
-</a>
-    </div>
-  </div>
-</div>
+                  {/* Phone */}
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900">Phone</h4>
+                      <div className="flex flex-col gap-1">
+                        <a href="tel:8662061093893" className="text-blue-600 hover:text-blue-700 transition-colors">
+                          866-20-61093893 - Minna
+                        </a>
+                        <a
+                          href="tel:+966500081927"
+                          className="text-blue-600 hover:text-blue-700 transition-colors"
+                        >
+                          <span dir="ltr">+966 50 008 1927</span>
+                          <span className="ml-1">- Saeed Saad</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
 
 
-    {/* Email */}
-    <div className="flex items-center gap-4">
-      <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-        <Mail className="w-6 h-6 text-white" />
-      </div>
-      <div>
-        <h4 className="font-semibold text-gray-900">{t('contact.info.emailLabel')}</h4>
-        <a href="mailto:falconsmgr@hotmail.com" className="text-blue-600 hover:text-blue-700 transition-colors">
-          {t('contact.info.email')}
-        </a>
-      </div>
-    </div>
+                  {/* Email */}
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900">{t('contact.info.emailLabel')}</h4>
+                      <a href="mailto:falconsmgr@hotmail.com" className="text-blue-600 hover:text-blue-700 transition-colors">
+                        {t('contact.info.email')}
+                      </a>
+                    </div>
+                  </div>
 
-    {/* Business Hours */}
-    <div className="flex items-center gap-4">
-      <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
-        <Clock className="w-6 h-6 text-white" />
-      </div>
-      <div>
-        <h4 className="font-semibold text-gray-900">{t('contact.info.businessHoursLabel')}</h4>
-        <p className="text-gray-600 text-sm">{t('contact.info.hours.weekdays')}</p>
-        <p className="text-gray-600 text-sm">{t('contact.info.hours.saturday')}</p>
-      </div>
-    </div>
+                  {/* Business Hours */}
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900">{t('contact.info.businessHoursLabel')}</h4>
+                      <p className="text-gray-600 text-sm">{t('contact.info.hours.weekdays')}</p>
+                      <p className="text-gray-600 text-sm">{t('contact.info.hours.saturday')}</p>
+                    </div>
+                  </div>
 
-  </div>
-</div>
+                </div>
+              </div>
 
 
               {/* Quick Stats */}
@@ -632,7 +707,7 @@ function App() {
                     opacity: isContactFormOpen ? 1 : 0,
                   }}
                 >
-                  <form className="space-y-6 opacity-0 animate-slide-right delay-400" style={{paddingTop: isContactFormOpen ? 0 : 0}} onSubmit={(e) => {
+                  <form className="space-y-6 opacity-0 animate-slide-right delay-400" style={{ paddingTop: isContactFormOpen ? 0 : 0 }} onSubmit={(e) => {
                     e.preventDefault();
                     const formData = new FormData(e.currentTarget);
                     const email = formData.get('email') as string;
@@ -647,8 +722,8 @@ function App() {
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.form.fullName')}</label>
-                        <input 
-                          type="text" 
+                        <input
+                          type="text"
                           name="name"
                           required
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
@@ -657,8 +732,8 @@ function App() {
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.form.companyName')}</label>
-                        <input 
-                          type="text" 
+                        <input
+                          type="text"
                           name="company"
                           required
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
@@ -669,8 +744,8 @@ function App() {
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.form.email')}</label>
-                        <input 
-                          type="email" 
+                        <input
+                          type="email"
                           name="email"
                           required
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
@@ -679,8 +754,8 @@ function App() {
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.form.phone')}</label>
-                        <input 
-                          type="tel" 
+                        <input
+                          type="tel"
                           name="phone"
                           required
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
@@ -690,7 +765,7 @@ function App() {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">{t('contact.form.message')}</label>
-                      <textarea 
+                      <textarea
                         name="message"
                         required
                         rows={4}
@@ -698,7 +773,7 @@ function App() {
                         placeholder={t('contact.form.messagePlaceholder')}
                       ></textarea>
                     </div>
-                    <button 
+                    <button
                       type="submit"
                       className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 opacity-0 animate-fade-up delay-600"
                     >
@@ -706,8 +781,8 @@ function App() {
                     </button>
                     <div className="text-center text-sm text-gray-600 mt-4">
                       <p>{t('contact.form.directEmail')}</p>
-                      <a 
-                        href="mailto:falconsmgr@hotmail.com" 
+                      <a
+                        href="mailto:falconsmgr@hotmail.com"
                         className="text-blue-600 hover:text-blue-700 font-medium"
                       >
                         {t('contact.form.directEmailLink')}
@@ -738,10 +813,10 @@ function App() {
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
-              
+
               {/* Navigation Buttons */}
               <div className="flex gap-8 justify-center py-8">
-                <a 
+                <a
                   href="https://maps.google.com/?q=Hua+Le+Lu,+Yuexiu,+Guangzhou,+Guangdong,+China"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -750,7 +825,7 @@ function App() {
                 >
                   <img src="/Google_Maps_icon_(2020).svg.png" alt="Google Maps" className="w-14 h-14 max-w-14 max-h-14 object-contain" />
                 </a>
-                <a 
+                <a
                   href="https://waze.com/ul?q=Hua+Le+Lu,+Yuexiu,+Guangzhou,+Guangdong,+China&navigate=yes"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -764,10 +839,10 @@ function App() {
           </div>
         </div>
       </section>
-      
+
       {/* Footer */}
       <Footer />
-      
+
       {/* WhatsApp Button */}
       <WhatsAppButton />
     </div>
