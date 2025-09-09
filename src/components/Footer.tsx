@@ -23,6 +23,10 @@ const Footer: React.FC = () => {
       });
     }
   };
+
+  const handleLogoClick = () => {
+    window.location.reload();
+  };
   
   return (
     <section className="relative pt-16 pb-8 md:pt-24 md:pb-12 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-400 overflow-x-hidden">
@@ -35,7 +39,7 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-12 md:mb-20">
           {/* Left: Enhanced Logo & Info */}
           <div className="flex flex-col gap-8 animate-fadeInLeft">
-            <div className="flex justify-center md:justify-start mb-2 group">
+            <div className="flex justify-center md:justify-start mb-2 group cursor-pointer" onClick={handleLogoClick}>
               <div className="relative">
                 <img 
                   src="/logo.png" 

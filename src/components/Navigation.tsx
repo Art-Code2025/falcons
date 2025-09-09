@@ -12,7 +12,12 @@ type NavigationProps = {
 const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpen, scrollToSection }) => {
   const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
+
+  const handleLogoClick = () => {
+    window.location.reload();
+  };
 
   // Handle scroll effect
   useEffect(() => {
@@ -51,7 +56,7 @@ const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpen, scro
         <div className="flex justify-between items-center h-16 md:h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <div className="flex items-center group">
+              <div className="flex items-center group cursor-pointer" onClick={handleLogoClick}>
                 {/* Enhanced Logo */}
                 <div className="relative">
                   <img
@@ -149,4 +154,4 @@ const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpen, scro
   );
 };
 
-export default Navigation; 
+export default Navigation;
