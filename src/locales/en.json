@@ -1,0 +1,363 @@
+{
+  "navigation": {
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "team": "Our Team",
+    "reviews": "Reviews",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "subtitle": "FALCONS",
+    "title": "WE BUILD BUSINESS WITH YOU",
+    "description": "With over 15 years of experience, helping businesses to grow.",
+    "ctaButton": "Contact us",
+    "trading": "Hong Kong Trading",
+    "experience": "15+ Years Experience"
+  },
+  "about": {
+    "steps": {
+      "established": "Established",
+      "experience": "Experience",
+      "location": "Location",
+      "services": "Services"
+    },
+    "title": "About Us",
+    "subtitle": "We are registered trading Company in Hong Kong",
+    "description": "Our company is established in 2004, we have experience over 15 years. Our Area of Business trading in Furniture, Building materials and Cosmetics. We Supply to our customers directly from Chinese suppliers In Hong Kong and main land China.",
+    "ctaButton": "Learn More"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "The finest business consulting services in the area",
+    "consulting": {
+      "title": "CONSULTING",
+      "description": "We provide free consultation to our customers to select the ideal supplier and provide certain advises in order to maintain mutual benefits",
+      "subtitle": "Financial advice that can save you time and money."
+    },
+    "support": {
+      "title": "SUPPORT",
+      "description": "We do Support our customers In every step of orders made and confirmed and provide after sales services to ensure the satisfaction of our customers",
+      "subtitle": "Marketing experience that counts when trying to reach your customer base."
+    },
+    "services": {
+      "title": "SERVICES",
+      "items": [
+        "Search for products required from actual suppliers",
+        "Provide alternative prices based on quality and quantity",
+        "We provide products inspection before delivery",
+        "We check all official documents before sending to customers",
+        "Provide certain Certificates for special products"
+      ],
+      "subtitle": "Marketing experience that counts when trying to reach your customer base."
+    },
+    "cta": {
+      "title": "Contact Us",
+      "button": "Contact Us"
+    },
+    "hero": {
+      "title": "Financial advice that can save you time and money.",
+      "subtitle": "Marketing experience that counts when trying to reach your customer base.",
+      "button": "Contact Us"
+    }
+  },
+  "humanCapital": {
+    "label": "Our Expertise",
+    "title": "Trading Excellence",
+    "description": "We specialize in trading Furniture, Building materials and Cosmetics with direct supply from Chinese suppliers in Hong Kong and mainland China.",
+    "subDescription": "Our commitment to quality and customer satisfaction has made us a trusted partner for businesses worldwide.",
+    "buttons": {
+      "services": "Our Services",
+      "readMore": "Learn More"
+    }
+  },
+  "sectors": {
+    "label": "Our Business Areas",
+    "description": "We specialize in trading high-quality products across multiple sectors with direct supply from Chinese manufacturers.",
+    "furniture": {
+      "category": "Trading",
+      "title": "Furniture"
+    },
+    "buildingMaterials": {
+      "category": "Trading",
+      "title": "Building Materials"
+    },
+    "cosmetics": {
+      "category": "Trading",
+      "title": "Cosmetics"
+    }
+  },
+  "team": {
+    "title": "The Team",
+    "subtitle": "Meet our dedicated team",
+    "members": {
+      "zailai": {
+        "name": "Zailai Shouki",
+        "position": "Director",
+        "description": "With over 15 years of experience in business consulting and trading, Zailai leads our company with strategic vision and deep market knowledge."
+      },
+      "minna": {
+        "name": "Minna Gou",
+        "position": "Marketing Assistant",
+        "description": "Minna specializes in customer relations and marketing strategies, ensuring our clients receive the best service and support throughout their journey."
+      },
+      "saeed": {
+        "name": "Saeed Saad Alghamdi",
+        "position": "Business Corporation Manager",
+        "description": "Saeed brings extensive expertise in corporate management and strategic business development, overseeing our international partnerships and corporate governance."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team for any inquiries about our trading services",
+    "address": {
+      "title": "Hua Le Lu, Yuexiu, Guangzhou, Guangdong, China",
+      "office": "V- Serviced Office , Rm E21 - Hua Le Building",
+      "mobile": "Mobile: +86-13710404949"
+    },
+    "info": {
+      "phone": "866-20-61093893 - Minna",
+      "phone": "+966 50 008 1927 - Saeed saad ",
+      "email": "falconsmgr@hotmail.com",
+      "emailLabel": "Email",
+      "businessHoursLabel": "Business Hours",
+      "hours": {
+        "weekdays": "Monday To Friday 9am to 6pm",
+        "saturday": "Saturday 9am To 1pm"
+      }
+    },
+    "form": {
+      "title": "Send us a Message",
+      "fullName": "Full Name *",
+      "fullNamePlaceholder": "Your full name",
+      "companyName": "Company Name *",
+      "companyNamePlaceholder": "Your company name",
+      "email": "Email Address *",
+      "emailPlaceholder": "your.email@example.com",
+      "phone": "Phone Number *",
+      "phonePlaceholder": "+1 (555) 123-4567",
+      "message": "Message *",
+      "messagePlaceholder": "Tell us about your project or inquiry...",
+      "sendButton": "Send Message",
+      "directEmail": "Fill out the form or send a direct email to:",
+      "directEmailLink": "falconsmgr@hotmail.com"
+    },
+    "location": {
+      "title": "Our Location",
+      "description": "Visit our office in Guangzhou, China"
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "title": "SIGN UP TO OUR NEWSLETTER:",
+      "placeholder": "falconsmgr@hotmail.com",
+      "terms": "I have read and accept the Terms & Privacy"
+    },
+    "links": {
+      "about": "About",
+      "contact": "Contact",
+      "legal": "Legal"
+    },
+    "copyright": "Copyright 2025 FALCONS. All rights reserved.",
+    "privacy": "Privacy Policy and Disclosures by FALCONS"
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "description": "Discover our successful trading projects and partnerships",
+    "filters": {
+      "all": "All Projects",
+      "furniture": "Furniture",
+      "building": "Building Materials",
+      "cosmetics": "Cosmetics"
+    },
+    "cta": {
+      "title": "Ready to Start Your Project?",
+      "description": "Let's discuss how we can help you achieve your trading goals with our proven expertise and global network.",
+      "button": "Get Started Today"
+    },
+    "items": {
+      "furnitureTrading": {
+        "title": "Furniture Trading Excellence",
+        "description": "We've established a comprehensive furniture trading network connecting premium Chinese manufacturers with international markets. We specialize in office furniture, home decor, and luxury pieces.",
+        "features": [
+          "Premium office furniture supply chain",
+          "Custom furniture manufacturing",
+          "Quality control and inspection services",
+          "International logistics and shipping",
+          "After-sales support and warranty"
+        ],
+        "technologies": ["Supply Chain Management", "Quality Control", "International Logistics", "Custom Manufacturing"],
+        "results": [
+          "300% increase in client base over 3 years",
+          "98% client satisfaction rate achieved",
+          "40% reduction in delivery times",
+          "Expansion to 25+ countries"
+        ]
+      },
+      "buildingMaterials": {
+        "title": "Building Materials Distribution",
+        "description": "We've developed a robust distribution network for high-quality building materials, serving construction projects across Asia and the Middle East with premium materials and reliable delivery.",
+        "features": [
+          "Premium building materials supply",
+          "Bulk material procurement",
+          "Quality certificates and testing",
+          "Custom project solutions",
+          "Technical consultation services"
+        ],
+        "technologies": ["Material Testing", "Bulk Procurement", "Quality Certificates", "Project Management"],
+        "results": [
+          "Supplied materials for 50+ major projects",
+          "25% cost reduction for clients",
+          "96% on-time delivery rate",
+          "Expanded supplier network to 100+ factories"
+        ]
+      },
+      "cosmetics": {
+        "title": "Cosmetics and Beauty Products",
+        "description": "We've established a specialized cosmetics trading division, connecting luxury brands with global markets through expertise in quality assurance and regulatory compliance.",
+        "features": [
+          "Luxury cosmetics and skincare products",
+          "Regulatory compliance and certificates",
+          "Brand development and packaging",
+          "Quality testing and safety standards",
+          "International market expansion"
+        ],
+        "technologies": ["Regulatory Compliance", "Quality Testing", "Brand Development", "International Trade"],
+        "results": [
+          "Launched 30+ beauty brands globally",
+          "97% regulatory compliance rate",
+          "Expansion to 15+ international markets",
+          "200% increase in product portfolio"
+        ]
+      },
+      "luxuryFurniture": {
+        "title": "Luxury Furniture Collection",
+        "description": "We've curated an exclusive luxury furniture collection featuring handcrafted pieces from skilled artisans, serving premium residential and hospitality markets worldwide.",
+        "features": [
+          "Handcrafted luxury furniture",
+          "Custom design and manufacturing",
+          "Premium material sourcing",
+          "Exclusive customer service",
+          "Installation and maintenance"
+        ],
+        "technologies": ["Custom Design", "Handcrafting", "Premium Materials", "Luxury Service"],
+        "results": [
+          "Created 200+ custom furniture pieces",
+          "Served 50+ luxury hotels and resorts",
+          "99% client satisfaction rate",
+          "Established exclusive partnerships"
+        ]
+      },
+      "industrialBuilding": {
+        "title": "Industrial Building Solutions",
+        "description": "We've developed comprehensive solutions for industrial building materials, providing specialized materials for factories, warehouses, and industrial facilities across Asia.",
+        "features": [
+          "High-quality industrial building materials",
+          "Specialized construction solutions",
+          "Safety standards and compliance",
+          "Technical engineering support",
+          "Project management services"
+        ],
+        "technologies": ["Industrial Materials", "Safety Standards", "Engineering Support", "Project Management"],
+        "results": [
+          "Completed 25+ industrial projects",
+          "30% reduction in construction time",
+          "100% safety compliance achieved",
+          "Established technical partnerships"
+        ]
+      },
+      "organicBeauty": {
+        "title": "Organic Beauty Products",
+        "description": "We've launched a premium organic beauty product line, connecting natural ingredient suppliers with conscious consumers through sustainable and ethical business practices.",
+        "features": [
+          "Organic and natural ingredients",
+          "Sustainable sourcing practices",
+          "Eco-friendly packaging",
+          "Certifications and compliance",
+          "Consumer education programs"
+        ],
+        "technologies": ["Organic Certifications", "Sustainable Sourcing", "Eco-friendly Packaging", "Consumer Education"],
+        "results": [
+          "Launched 20+ organic beauty products",
+          "100% organic certification achieved",
+          "60% reduction in packaging waste",
+          "Expansion to 10+ eco-conscious markets"
+        ]
+      }
+    },
+    "stats": {
+      "clients": "Clients",
+      "revenue": "Revenue",
+      "satisfaction": "Satisfaction",
+      "duration": "Duration"
+    },
+    "modal": {
+      "close": "Close",
+      "features": "Key Features",
+      "technologies": "Technologies Used",
+      "results": "Achieved Results"
+    }
+  },
+  "reviews": {
+    "title": "Client Reviews",
+    "description": "Discover why leading companies worldwide trust FALCONS",
+    "stats": {
+      "satisfaction": "Client Satisfaction",
+      "projectsCompleted": "Projects Completed",
+      "countriesServed": "Countries Served",
+      "averageRating": "Average Rating"
+    },
+    "testimonials": {
+      "ahmed": {
+        "name": "Ahmed Al-Rashid",
+        "position": "Procurement Manager",
+        "company": "Dubai Construction Co.",
+        "country": "UAE",
+        "content": "FALCONS has been our trusted partner for building materials for over 3 years. Their quality control and on-time delivery exceed our expectations. They've helped us complete 15+ major projects successfully.",
+        "project": "Luxury Hotel Complex - Dubai"
+      },
+      "sarah": {
+        "name": "Sarah Chen",
+        "position": "Operations Manager",
+        "company": "Shanghai Furniture Group",
+        "country": "China",
+        "content": "Working with FALCONS on our furniture export business. Their expertise in international logistics and quality assurance helped us expand to 20+ countries. Exceptional service and reliability.",
+        "project": "Global Furniture Distribution Network"
+      },
+      "mohammed": {
+        "name": "Mohammed Hassan",
+        "position": "CEO",
+        "company": "International Beauty Brands",
+        "country": "Saudi Arabia",
+        "content": "FALCONS helped us launch our cosmetics brand in 8 new markets. Their expertise in regulatory compliance and market knowledge is unmatched. Our revenue increased by 300% in the first year.",
+        "project": "Luxury Cosmetics Market Expansion"
+      },
+      "lisa": {
+        "name": "Lisa Thompson",
+        "position": "Interior Design Manager",
+        "company": "Luxury Decorations Ltd",
+        "country": "United Kingdom",
+        "content": "FALCONS' luxury furniture collection is absolutely stunning. Their attention to detail and craftsmanship is first-class. Our clients are consistently amazed by the quality and design.",
+        "project": "Luxury Residential Projects"
+      },
+      "rajesh": {
+        "name": "Rajesh Patel",
+        "position": "Project Manager",
+        "company": "Industrial Solutions Co.",
+        "country": "India",
+        "content": "FALCONS supplied us with specialized industrial building materials that meet all safety standards. Their technical support and project management services were invaluable for our factory construction project.",
+        "project": "Advanced Manufacturing Facility"
+      },
+      "emma": {
+        "name": "Emma Wilson",
+        "position": "Brand Manager",
+        "company": "Organic Beauty Co.",
+        "country": "Australia",
+        "content": "FALCONS helped us source the highest quality organic ingredients and navigate complex certification requirements. Their sustainable sourcing practices align perfectly with our brand values.",
+        "project": "Organic Beauty Product Line"
+      }
+    },
+    "project": "Project"
+  }
+} 
