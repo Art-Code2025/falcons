@@ -3,6 +3,7 @@ import { Menu, X, ArrowRight, ChevronLeft, ChevronRight, Star, Phone, Mail, MapP
 import { useTranslation } from 'react-i18next';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
+import { FaEnvelope } from 'react-icons/fa';
 import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
 import Testimonials from './components/Testimonials';
@@ -529,64 +530,76 @@ function App() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto">
-  {/* Zailai Shouki */}
-  <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2">
-    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{t('team.members.zailai.name')}</h3>
-    <p className="text-blue-600 font-semibold mb-3 md:mb-4 text-sm md:text-base">
-      {t('team.members.zailai.position')}
-    </p>
-    <p className="text-gray-600 text-sm md:text-base mb-6">
-      {t('team.members.zailai.description')}
-    </p>
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto">
+      {/* Zailai Shouki */}
+      <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2 min-h-[300px] flex flex-col justify-between">
+        <div>
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{t('team.members.zailai.name')}</h3>
+          <p className="text-blue-600 font-semibold mb-3 md:mb-4 text-sm md:text-base">
+            {t('team.members.zailai.position')}
+          </p>
+          <p className="text-gray-600 text-sm md:text-base mb-6">
+            {t('team.members.zailai.description')}
+          </p>
+        </div>
+        {/* Email Section */}
+        <div className="flex flex-col items-center gap-2">
+          <a
+            href="mailto:falconsmgr@hotmail.com"
+            className="w-20 h-20 rounded-full flex items-center justify-center bg-white border-2 border-gray-900 text-gray-900 shadow-lg hover:scale-110 hover:shadow-2xl transition-transform duration-300"
+            aria-label={`Email ${t('team.members.zailai.name')}`}
+          >
+            <FaEnvelope className="w-10 h-10" />
+          </a>
+        </div>
+      </div>
 
-    {/* Email Icon */}
-    <a
-      href="mailto:falconsmgr@hotmail.com"
-      className="w-12 h-12 rounded-full flex items-center justify-center mx-auto bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition-transform duration-300"
-    >
-      ✉️
-    </a>
-  </div>
+      {/* Minna Gou */}
+      <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2 min-h-[300px] flex flex-col justify-between">
+        <div>
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{t('team.members.minna.name')}</h3>
+          <p className="text-blue-600 font-semibold mb-3 md:mb-4 text-sm md:text-base">
+            {t('team.members.minna.position')}
+          </p>
+          <p className="text-gray-600 text-sm md:text-base mb-6">
+            {t('team.members.minna.description')}
+          </p>
+        </div>
+        {/* Email Section */}
+        <div className="flex flex-col items-center gap-2">
+          <a
+            href="mailto:falcon-minna@foxmail.com"
+            className="w-20 h-20 rounded-full flex items-center justify-center bg-white border-2 border-gray-900 text-gray-900 shadow-lg hover:scale-110 hover:shadow-2xl transition-transform duration-300"
+            aria-label={`Email ${t('team.members.minna.name')}`}
+          >
+            <FaEnvelope className="w-10 h-10" />
+          </a>
+        </div>
+      </div>
 
-  {/* Minna Gou */}
-  <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2">
-    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{t('team.members.minna.name')}</h3>
-    <p className="text-blue-600 font-semibold mb-3 md:mb-4 text-sm md:text-base">
-      {t('team.members.minna.position')}
-    </p>
-    <p className="text-gray-600 text-sm md:text-base mb-6">
-      {t('team.members.minna.description')}
-    </p>
-
-    {/* Email Icon */}
-    <a
-      href="mailto:falcon-minna@foxmail.com"
-      className="w-12 h-12 rounded-full flex items-center justify-center mx-auto bg-gradient-to-br from-green-500 to-green-600 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition-transform duration-300"
-    >
-      ✉️
-    </a>
-  </div>
-
-  {/* Saeed Saad Alghamdi */}
-  <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2 md:col-span-2 lg:col-span-1">
-    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{t('team.members.saeed.name')}</h3>
-    <p className="text-blue-600 font-semibold mb-3 md:mb-4 text-sm md:text-base">
-      {t('team.members.saeed.position')}
-    </p>
-    <p className="text-gray-600 text-sm md:text-base mb-6">
-      {t('team.members.saeed.description')}
-    </p>
-
-    {/* Email Icon */}
-    <a
-      href="mailto:caprephe@gmail.com"
-      className="w-12 h-12 rounded-full flex items-center justify-center mx-auto bg-gradient-to-br from-purple-500 to-purple-600 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition-transform duration-300"
-    >
-      ✉️
-    </a>
-  </div>
-</div>
+      {/* Saeed Saad Alghamdi */}
+      <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2 min-h-[300px] flex flex-col justify-between">
+        <div>
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{t('team.members.saeed.name')}</h3>
+          <p className="text-blue-600 font-semibold mb-3 md:mb-4 text-sm md:text-base">
+            {t('team.members.saeed.position')}
+          </p>
+          <p className="text-gray-600 text-sm md:text-base mb-6">
+            {t('team.members.saeed.description')}
+          </p>
+        </div>
+        {/* Email Section */}
+        <div className="flex flex-col items-center gap-2">
+          <a
+            href="mailto:caprephe@gmail.com"
+            className="w-20 h-20 rounded-full flex items-center justify-center bg-white border-2 border-gray-900 text-gray-900 shadow-lg hover:scale-110 hover:shadow-2xl transition-transform duration-300"
+            aria-label={`Email ${t('team.members.saeed.name')}`}
+          >
+            <FaEnvelope className="w-10 h-10" />
+          </a>
+        </div>
+      </div>
+    </div>
 
 
         </div>
