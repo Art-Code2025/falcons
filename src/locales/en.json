@@ -127,6 +127,10 @@
         "saturday": "Saturday 9am To 1pm"
       }
     },
+    "whatsappButton": {
+      "text": "Quick Contact via WhatsApp",
+      "message": "Hello, I would like to inquire about your services"
+    },
     "form": {
       "title": "Send us a Message",
       "fullName": "Full Name *",
