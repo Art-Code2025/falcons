@@ -530,48 +530,65 @@ function App() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto">
-            {/* Zailai Shouki */}
-            <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2 opacity-0 animate-slide-left delay-200">
-              <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <div className="w-8 h-8 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center">
-                  <div className="w-4 h-4 md:w-6 md:h-6 bg-blue-500 rounded-full"></div>
-                </div>
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{t('team.members.zailai.name')}</h3>
-              <p className="text-blue-600 font-semibold mb-3 md:mb-4 text-sm md:text-base">{t('team.members.zailai.position')}</p>
-              <p className="text-gray-600 text-sm md:text-base">
-                {t('team.members.zailai.description')}
-              </p>
-            </div>
+  {/* Zailai Shouki */}
+  <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2">
+    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{t('team.members.zailai.name')}</h3>
+    <p className="text-blue-600 font-semibold mb-3 md:mb-4 text-sm md:text-base">
+      {t('team.members.zailai.position')}
+    </p>
+    <p className="text-gray-600 text-sm md:text-base mb-6">
+      {t('team.members.zailai.description')}
+    </p>
 
-            {/* Minna Gou */}
-            <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2 delay-200 opacity-0 animate-slide-right delay-300">
-              <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <div className="w-8 h-8 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center">
-                  <div className="w-4 h-4 md:w-6 md:h-6 bg-green-500 rounded-full"></div>
-                </div>
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{t('team.members.minna.name')}</h3>
-              <p className="text-blue-600 font-semibold mb-3 md:mb-4 text-sm md:text-base">{t('team.members.minna.position')}</p>
-              <p className="text-gray-600 text-sm md:text-base">
-                {t('team.members.minna.description')}
-              </p>
-            </div>
+    {/* Email Icon */}
+    <a
+      href="mailto:falconsmgr@hotmail.com"
+      className="w-12 h-12 rounded-full flex items-center justify-center mx-auto bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition-transform duration-300"
+    >
+      ✉️
+    </a>
+  </div>
 
-            {/* Saeed Saad Alghamdi */}
-            <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2 delay-400 md:col-span-2 lg:col-span-1 opacity-0 animate-slide-left delay-400">
-              <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                <div className="w-8 h-8 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center">
-                  <div className="w-4 h-4 md:w-6 md:h-6 bg-purple-500 rounded-full"></div>
-                </div>
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{t('team.members.saeed.name')}</h3>
-              <p className="text-blue-600 font-semibold mb-3 md:mb-4 text-sm md:text-base">{t('team.members.saeed.position')}</p>
-              <p className="text-gray-600 text-sm md:text-base">
-                {t('team.members.saeed.description')}
-              </p>
-            </div>
-          </div>
+  {/* Minna Gou */}
+  <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2">
+    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{t('team.members.minna.name')}</h3>
+    <p className="text-blue-600 font-semibold mb-3 md:mb-4 text-sm md:text-base">
+      {t('team.members.minna.position')}
+    </p>
+    <p className="text-gray-600 text-sm md:text-base mb-6">
+      {t('team.members.minna.description')}
+    </p>
+
+    {/* Email Icon */}
+    <a
+      href="mailto:falcon-minna@foxmail.com"
+      className="w-12 h-12 rounded-full flex items-center justify-center mx-auto bg-gradient-to-br from-green-500 to-green-600 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition-transform duration-300"
+    >
+      ✉️
+    </a>
+  </div>
+
+  {/* Saeed Saad Alghamdi */}
+  <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center hover:shadow-2xl transition-all duration-500 hover:transform hover:-translate-y-2 md:col-span-2 lg:col-span-1">
+    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{t('team.members.saeed.name')}</h3>
+    <p className="text-blue-600 font-semibold mb-3 md:mb-4 text-sm md:text-base">
+      {t('team.members.saeed.position')}
+    </p>
+    <p className="text-gray-600 text-sm md:text-base mb-6">
+      {t('team.members.saeed.description')}
+    </p>
+
+    {/* Email Icon */}
+    <a
+      href="mailto:caprephe@gmail.com"
+      className="w-12 h-12 rounded-full flex items-center justify-center mx-auto bg-gradient-to-br from-purple-500 to-purple-600 text-white shadow-lg hover:scale-110 hover:shadow-2xl transition-transform duration-300"
+    >
+      ✉️
+    </a>
+  </div>
+</div>
+
+
         </div>
       </section>
 
